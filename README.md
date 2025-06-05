@@ -127,8 +127,8 @@ Description=GitHub Actions Self-Hosted Runner
 After=network.target
 
 [Service]
-ExecStart=/home/ubuntu/run.sh
-WorkingDirectory=/home/ubuntu
+ExecStart=/home/ubuntu/actions-runner/run.sh
+WorkingDirectory=/home/ubuntu/actions-runner
 User=ubuntu
 Restart=always
 RestartSec=10
@@ -143,7 +143,7 @@ WantedBy=multi-user.target
 
 🔐 2. Make the Script Executable
 
-chmod +x /home/ubuntu/run.sh
+chmod +x /home/ubuntu/actions-runner/run.sh
 
 🔄 3. Enable and Start the Service
 Run the following commands to enable the service to start on boot and start it now:
